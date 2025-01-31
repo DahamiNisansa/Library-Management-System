@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: #586A56;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.DashboardFormController">
+   <children>
+      <VBox layoutX="-1.0" prefHeight="800.0" prefWidth="227.0" stylesheets="@../css/style.css">
+         <children>
+            <VBox prefHeight="281.0" prefWidth="211.0" style="-fx-background-color: #04362F; -fx-background-radius: 0 0 50 50;">
+               <VBox.margin>
+                  <Insets left="8.0" right="8.0" top="8.0" />
+               </VBox.margin>
+               <children>
+                  <AnchorPane prefHeight="227.0" prefWidth="211.0">
+                     <children>
+                        <ImageView fitHeight="86.0" fitWidth="89.0" layoutX="61.0" layoutY="14.0">
+                           <image>
+                              <Image url="@../img/login_icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="154.0" text="(PVT) Ltd." textAlignment="CENTER" textFill="#ff8747">
+                           <font>
+                              <Font name="Bernard MT Condensed" size="31.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="115.0" text="B o o k L i b " textAlignment="CENTER" textFill="#ff8747">
+                           <font>
+                              <Font name="Bernard MT Condensed" size="31.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="564.0" prefWidth="227.0">
+               <children>
+                  <VBox alignment="CENTER" layoutY="8.0" prefHeight="422.0" prefWidth="226.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" onAction="#btnUserOnAction" prefHeight="25.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #BBC1BB;" text="User">
+                           <VBox.margin>
+                              <Insets bottom="15.0" top="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#btnBooksOnAction" prefHeight="25.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #BBC1BB;" text="Books">
+                           <VBox.margin>
+                              <Insets bottom="15.0" top="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#btnBorrowReturnOnAction" prefHeight="25.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #BBC1BB;" text="Borrow &amp; Return">
+                           <VBox.margin>
+                              <Insets bottom="15.0" top="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#btnFinePaymentOnAction" prefHeight="25.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #BBC1BB;" text="Fine Payment">
+                           <VBox.margin>
+                              <Insets bottom="15.0" top="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#btnReportOnAction" prefHeight="25.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #BBC1BB;" text="Report">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <VBox layoutX="226.0" prefHeight="800.0" prefWidth="1074.0">
+         <children>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="786.0" prefWidth="1074.0" snapToPixel="false" style="-fx-background-color: white; -fx-background-radius: 35;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="8.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="69.0" prefWidth="1054.0" style="-fx-background-color: #04362F; -fx-background-radius: 25;">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label styleClass="dash-text-color" stylesheets="@../css/style.css" text="Welcome  to  Library_Management_System" textAlignment="CENTER" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Britannic Bold" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <AnchorPane fx:id="LoadFormContent" prefHeight="688.0" prefWidth="1019.0" style="-fx-background-radius: 25;">
+                     <VBox.margin>
+                        <Insets bottom="18.0" left="18.0" right="18.0" />
+                     </VBox.margin>
+                     <children>
+                        <ImageView fitHeight="688.0" fitWidth="1038.0" layoutX="1.0" opacity="0.88">
+                           <image>
+                              <Image url="@../../../../../../../../EDU/2.%20ICET/7.%20%20%23%20(CW)%20Standalone%20Application%20Development/Course%20work/Final%20Project_Library%20MS/img/dash%20center.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

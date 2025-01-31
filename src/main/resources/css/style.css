@@ -1,0 +1,10 @@
+
+.login-title-layout{
+    -fx-background-color : #EBC95E;
+    -fx-background-radius: 0 50 0 50;
+}
+
+.dash-text-color{
+    -fx-background-color : s#04362F;
+    -fx-color: #ffffff;
+}

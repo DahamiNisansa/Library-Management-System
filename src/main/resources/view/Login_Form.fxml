@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="489.0" fitWidth="410.0" layoutX="241.0" layoutY="-76.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.47">
+         <image>
+            <Image url="@../img/login2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="444.0" fitWidth="308.0" layoutX="-51.0" layoutY="-30.0" nodeOrientation="RIGHT_TO_LEFT" styleClass="login-title-layout">
+         <image>
+            <Image url="@../img/login1.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" layoutY="36.0" text="B o o k L i b " textAlignment="CENTER" textFill="#ff8747">
+         <font>
+            <Font name="Bernard MT Condensed" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="424.0" layoutY="48.0" text="LOGIN" textFill="#0e3616">
+         <font>
+            <Font name="Britannic Bold" size="34.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="14.0" layoutY="23.0">
+         <image>
+            <Image url="@../img/login_icon.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="71.0" text="(PVT) Ltd." textAlignment="CENTER" textFill="#ff8747">
+         <font>
+            <Font name="Bernard MT Condensed" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="225.0" text="Library" textAlignment="CENTER" textFill="#ff8747">
+         <font>
+            <Font name="Bookman Old Style" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="249.0" text="Management" textAlignment="CENTER" textFill="#ff8747">
+         <font>
+            <Font name="Bookman Old Style" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="273.0" text="System" textAlignment="CENTER" textFill="#ff8747">
+         <font>
+            <Font name="Bookman Old Style" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="318.0" text="Mr. H.M. Sumathipala Liyanage" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="336.0" text="Rajagiriya" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="354.0" text="booklib@sample.com" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="372.0" text="+94 123 456 789" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUsername" layoutX="361.0" layoutY="135.0" prefHeight="26.0" prefWidth="203.0" promptText="username" />
+      <JFXButton layoutX="361.0" layoutY="275.0" onAction="#btnLoginOnAction" prefHeight="35.0" prefWidth="82.0" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Login">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Hyperlink layoutX="470.0" layoutY="293.0" onAction="#hyperRegisterOnAction" text="Register now" textFill="#080808" underline="true">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="473.0" layoutY="278.0" text="Are you a new user?">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="txtPassword" layoutX="361.0" layoutY="203.0" prefHeight="26.0" prefWidth="203.0" promptText="password" />
+   </children>
+</AnchorPane>

@@ -47,15 +47,13 @@ public class DashboardFormController {
     }
 
     @FXML
-    void btnUserOnAction(ActionEvent event) {
+    void btnUserOnAction(ActionEvent event) throws IOException {
         URL resource = this.getClass().getResource("/view/User_Form.fxml");
         assert resource != null;
         Parent load = null;
-        try {
+
             load = FXMLLoader.load(resource);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+
         LoadFormContent.getChildren().clear();
         LoadFormContent.getChildren().add(load);
 

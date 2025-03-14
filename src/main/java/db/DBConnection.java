@@ -11,14 +11,14 @@ public class DBConnection {
 
     private static DBConnection instance;
 
-    private Connection connection;
+    private final Connection connection;
 
     private DBConnection(){
-        String URL="jdbc:mysql://localhost:3306/Library_Management_System";
+        String url="jdbc:mysql://localhost:3306/library_management_system";
         String userName="root";
         String password="";
         try {
-            this.connection = DriverManager.getConnection(URL, userName, password);
+            this.connection = DriverManager.getConnection(url, userName, password);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

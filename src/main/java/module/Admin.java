@@ -11,5 +11,9 @@ import lombok.*;
 public class Admin {
 
     private String userName;
+    private String email;
     private String password;
+
+
+
 }

@@ -28,18 +28,20 @@ public class LoginFormController {
 
     @FXML
     void btnLoginOnAction(ActionEvent event) throws SQLException, IOException {
+
         String key = "#5541Asd";
         BasicTextEncryptor basicTextEncryptor = new BasicTextEncryptor();
         basicTextEncryptor.setPassword(key);
 
-        String SQL = "SELECT * FROM Admins WHERE Username="+"'"+txtUsername.getText()+"'";
+        String sql = "SELECT * FROM admin WHERE username="+"'"+txtUsername.getText()+"'";
         Connection connection = DBConnection.getInstance().getConnection();
-        ResultSet resultSet = connection.createStatement().executeQuery(SQL);
+        ResultSet resultSet = connection.createStatement().executeQuery(sql);
 
         if (resultSet.next()){
             Admin admin = new Admin(
-            resultSet.getString(2),
-            resultSet.getString(3)
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4)
             );
 
             if (basicTextEncryptor.decrypt(admin.getPassword()).equals(txtPassword.getText())){
@@ -50,6 +52,8 @@ public class LoginFormController {
                 new Alert(Alert.AlertType.ERROR,"Check Your Password Again !").show();
             }
 
+        }else {
+            new Alert(Alert.AlertType.ERROR,"User Not Found").show();
         }
     }
 

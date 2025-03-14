@@ -69,7 +69,7 @@ public class UserFormController {
         if (txtUserID.getText().isEmpty() || txtUserName.getText().isEmpty() || txtContactNo.getText().isEmpty() ||
                 txtAddress.getText().isEmpty() || txtMembershipDate.getText().isEmpty()) {
             new Alert(Alert.AlertType.ERROR, "All fields must be filled!").show();
-            return;
+
         }else {
 
             // Create Users object with input values
@@ -112,10 +112,10 @@ public class UserFormController {
     //Load all user data from database to user table
     @FXML
     void btnUserReloadOnAction(ActionEvent event) {
-        LoadTable();
+        loadTable();
     }
 
-    private void LoadTable() {
+    private void loadTable() {
         //set object data into table columns
         colUserID.setCellValueFactory(new PropertyValueFactory<>("uid"));
         colUserName.setCellValueFactory(new PropertyValueFactory<>("uName"));
@@ -131,5 +131,8 @@ public class UserFormController {
         //add observable list objects into user table
         tblUserTable.setItems(userObservableList);
 
+    }
+
+    public void btnUserSearchOnAction(ActionEvent actionEvent) {
     }
 }

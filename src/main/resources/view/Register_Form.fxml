@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="410.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterFormController">
    <children>
       <ImageView fitHeight="468.0" fitWidth="670.0" layoutX="-12.0" layoutY="-58.0" opacity="0.71">
@@ -32,13 +31,14 @@
             <Image url="@../img/login1.jpg" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtUsername" layoutX="239.0" layoutY="114.0" prefHeight="26.0" prefWidth="193.0" promptText="username" />
-      <JFXPasswordField fx:id="txtPassword" layoutX="239.0" layoutY="176.0" prefHeight="26.0" prefWidth="194.0" promptText="password" />
-      <JFXPasswordField fx:id="txtConfirmPassword" layoutX="238.0" layoutY="237.0" prefHeight="26.0" prefWidth="194.0" promptText="confirm password" />
-      <JFXButton layoutX="294.0" layoutY="295.0" onAction="#btnRegisterOnAction" prefHeight="35.0" prefWidth="82.0" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Register">
+      <JFXTextField fx:id="txtUsername" layoutX="236.0" layoutY="95.0" prefHeight="26.0" prefWidth="193.0" promptText="username" />
+      <JFXPasswordField fx:id="txtPassword" layoutX="236.0" layoutY="200.0" prefHeight="26.0" prefWidth="194.0" promptText="password" />
+      <JFXPasswordField fx:id="txtConfirmPassword" layoutX="238.0" layoutY="256.0" prefHeight="26.0" prefWidth="194.0" promptText="confirm password" />
+      <JFXButton layoutX="292.0" layoutY="309.0" onAction="#btnRegisterOnAction" prefHeight="35.0" prefWidth="82.0" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Register">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
+      <JFXTextField fx:id="txtEmail" layoutX="236.0" layoutY="148.0" prefHeight="26.0" prefWidth="193.0" promptText="email" />
    </children>
 </AnchorPane>

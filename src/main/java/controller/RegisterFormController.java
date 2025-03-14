@@ -18,6 +18,9 @@ import java.sql.SQLException;
 public class RegisterFormController {
 
     @FXML
+    private JFXTextField txtEmail;
+
+    @FXML
     private JFXPasswordField txtConfirmPassword;
 
     @FXML
@@ -32,23 +35,24 @@ public class RegisterFormController {
         BasicTextEncryptor basicTextEncryptor = new BasicTextEncryptor();
         basicTextEncryptor.setPassword(key);
 
-        String URL = "INSERT INTO Admins (Username, Password) VALUES(?,?)";
+        String url = "INSERT INTO admin (username, email, password) VALUES(?,?,?)";
 
         if (txtPassword.getText().equals(txtConfirmPassword.getText())){
 
             Connection connection = DBConnection.getInstance().getConnection();
-            ResultSet resultSet = null;
-            resultSet = connection.createStatement().executeQuery("SELECT * FROM Admins WHERE Username=" + "'" + txtUsername.getText() + "'");
+            ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM admin WHERE username=" + "'" + txtUsername.getText() + "'");;
 
 
                 if (!resultSet.next()){
                     Admin admin = new Admin(
                             txtUsername.getText(),
+                            txtEmail.getText(),
                             txtPassword.getText());
 
-                    PreparedStatement pstm = connection.prepareStatement(URL);
+                    PreparedStatement pstm = connection.prepareStatement(url);
                     pstm.setString(1,admin.getUserName());
-                    pstm.setString(2,basicTextEncryptor.encrypt(admin.getPassword()));
+                    pstm.setString(2,admin.getEmail());
+                    pstm.setString(3,basicTextEncryptor.encrypt(admin.getPassword()));
                     pstm.executeUpdate();
 
                 }else{
@@ -62,4 +66,7 @@ public class RegisterFormController {
 
     }
 
+    public void setTxtEmail(JFXTextField txtEmail) {
+        this.txtEmail = txtEmail;
+    }
 }

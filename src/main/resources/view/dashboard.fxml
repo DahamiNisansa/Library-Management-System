@@ -41,14 +41,14 @@
             </VBox>
             <AnchorPane prefHeight="564.0" prefWidth="227.0">
                <children>
-                  <VBox alignment="CENTER" layoutY="8.0" prefHeight="447.0" prefWidth="226.0">
+                  <VBox alignment="CENTER" layoutY="8.0" prefHeight="538.0" prefWidth="226.0">
                      <children>
-                        <JFXButton buttonType="RAISED" onAction="#btnUserOnAction" prefHeight="25.0" prefWidth="166.0" style="-fx-background-radius: 0 40 0 35; -fx-background-color: #d7f5d7;" text="User">
+                        <JFXButton buttonType="RAISED" onAction="#btnUserOnAction" prefHeight="45.0" prefWidth="166.0" style="-fx-background-radius: 0 40 0 35; -fx-background-color: #d7f5d7;" text="User">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#btnBooksOnAction" prefHeight="25.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #d7f5d7;" text="Books">
+                        <JFXButton buttonType="RAISED" onAction="#btnBooksOnAction" prefHeight="45.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #d7f5d7;" text="Books">
                            <VBox.margin>
                               <Insets bottom="15.0" top="15.0" />
                            </VBox.margin>
@@ -56,7 +56,7 @@
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#btnBorrowReturnOnAction" prefHeight="25.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #d7f5d7;" text="Borrow &amp; Return">
+                        <JFXButton buttonType="RAISED" onAction="#btnBorrowOnAction" prefHeight="45.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #d7f5d7;" text="Borrow Book">
                            <VBox.margin>
                               <Insets bottom="15.0" top="15.0" />
                            </VBox.margin>
@@ -64,15 +64,12 @@
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#btnFinePaymentOnAction" prefHeight="25.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #d7f5d7;" text="Fine Payment">
-                           <VBox.margin>
-                              <Insets bottom="15.0" top="15.0" />
-                           </VBox.margin>
+                        <JFXButton buttonType="RAISED" onAction="#btnReturnOnAction" prefHeight="45.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #d7f5d7;" text="Return Book">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#btnReportOnAction" prefHeight="25.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #d7f5d7;" text="Report">
+                        <JFXButton buttonType="RAISED" onAction="#btnReportOnAction" prefHeight="45.0" prefWidth="166.0" style="-fx-background-radius: 0 35 0 35; -fx-background-color: #d7f5d7;" text="Report">
                            <VBox.margin>
                               <Insets bottom="10.0" top="15.0" />
                            </VBox.margin>

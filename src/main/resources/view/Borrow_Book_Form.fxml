@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Borrow.BorrowBookFormController">
+   <children>
+      <AnchorPane prefHeight="784.0" prefWidth="1263.0" style="-fx-background-color: #BBC1BB; -fx-background-radius: 35;">
+         <children>
+            <AnchorPane layoutX="423.0" prefHeight="58.0" prefWidth="398.0" style="-fx-background-color: #04362F; -fx-background-radius: 0 0 50 50;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="75.0" layoutY="16.0" text="Borrow Book Management" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="txtBorrowMemName" layoutX="490.0" layoutY="187.0" prefHeight="26.0" prefWidth="300.0" promptText="Member Name" />
+            <JFXTextField fx:id="txtBorrowContact" layoutX="859.0" layoutY="187.0" prefHeight="26.0" prefWidth="300.0" promptText="Contact Number" />
+            <JFXButton buttonType="RAISED" layoutX="622.0" layoutY="575.0" onAction="#btnBorrowBookOnAction" prefHeight="32.0" prefWidth="182.0" ripplerFill="#e1e136" style="-fx-background-color: #e1e136;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Borrow the Book">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtBorrowMemId" layoutX="123.0" layoutY="187.0" prefHeight="26.0" prefWidth="300.0" promptText="Member ID" />
+            <JFXButton buttonType="RAISED" layoutX="667.0" layoutY="642.0" onAction="#btnBorrowReturnOnAction" prefHeight="32.0" prefWidth="141.0" ripplerFill="#632020" style="-fx-background-color: #e4a322;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Return">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="1019.0" layoutY="257.0" onAction="#btnBorrowMemSearchOnAction" prefHeight="32.0" prefWidth="147.0" ripplerFill="#1dcc8f" style="-fx-background-color: #1dcc8f;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Search">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="726.0" layoutY="712.0" onAction="#btnBorrowClearOnAction" prefHeight="32.0" prefWidth="82.0" ripplerFill="#fa6621" style="-fx-background-color: #1dcc8f;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Clear">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtBorrowBookTitle" layoutX="485.0" layoutY="341.0" prefHeight="26.0" prefWidth="300.0" promptText="Book Title" />
+            <JFXTextField fx:id="txtBorrowIsbn" layoutX="854.0" layoutY="341.0" prefHeight="26.0" prefWidth="300.0" promptText="ISBN" />
+            <JFXTextField fx:id="txtBorrowBookId" layoutX="118.0" layoutY="341.0" prefHeight="26.0" prefWidth="300.0" promptText="Book Id" />
+            <JFXButton buttonType="RAISED" layoutX="1014.0" layoutY="411.0" onAction="#btnBorrowBookSearchOnAction" prefHeight="32.0" prefWidth="147.0" ripplerFill="#1dcc8f" style="-fx-background-color: #1dcc8f;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Search">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <DatePicker fx:id="dtpBorrowDate" layoutX="111.0" layoutY="495.0" prefHeight="26.0" prefWidth="319.0" promptText="Select Borrow Date" />
+            <DatePicker fx:id="dtpReturnDate" layoutX="490.0" layoutY="495.0" prefHeight="26.0" prefWidth="319.0" promptText="Select Return Date" />
+            <Label layoutX="111.0" layoutY="459.0" prefHeight="20.0" prefWidth="106.0" text="Borrow Date" />
+            <Label layoutX="490.0" layoutY="459.0" prefHeight="20.0" prefWidth="106.0" text="Return Date" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

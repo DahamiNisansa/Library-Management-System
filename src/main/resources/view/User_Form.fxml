@@ -63,5 +63,10 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="274.0" layoutY="679.0" onAction="#btnClearOnAction" prefHeight="32.0" prefWidth="82.0" ripplerFill="#1dcc8f" style="-fx-background-color: #1dcc8f;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Clear">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

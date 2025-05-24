@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.book.BookManagementFormController">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="774.0" prefWidth="1254.0" style="-fx-background-color: #BBC1BB; -fx-background-radius: 35;">
+         <children>
+            <AnchorPane layoutX="423.0" prefHeight="58.0" prefWidth="398.0" style="-fx-background-color: #04362F; -fx-background-radius: 0 0 50 50;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="113.0" layoutY="16.0" text="Book Management" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="txtBookID" layoutX="747.0" layoutY="181.0" prefHeight="26.0" prefWidth="426.0" promptText="Book ID" />
+            <TableView fx:id="tblBookTable" layoutX="43.0" layoutY="185.0" prefHeight="490.0" prefWidth="622.0">
+               <columns>
+                  <TableColumn fx:id="colBookID" prefWidth="75.19997787475586" text="Book ID" />
+                  <TableColumn fx:id="colBookTitle" prefWidth="185.59999084472656" text="Book Title" />
+                  <TableColumn fx:id="colISBN" prefWidth="116.0" text="ISBN" />
+                  <TableColumn fx:id="colCategory" prefWidth="125.60003662109375" text="Category" />
+                  <TableColumn fx:id="colAvailable" prefWidth="121.5999755859375" text="Availability" />
+               </columns>
+            </TableView>
+            <JFXTextField fx:id="txtBookTitle" layoutX="747.0" layoutY="265.0" prefHeight="26.0" prefWidth="426.0" promptText="Title" />
+            <JFXTextField fx:id="txtISBN" layoutX="747.0" layoutY="351.0" prefHeight="26.0" prefWidth="426.0" promptText="ISBN" />
+            <JFXTextField fx:id="txtBookCategory" layoutX="747.0" layoutY="440.0" prefHeight="26.0" prefWidth="426.0" promptText="Category" />
+            <JFXButton buttonType="RAISED" layoutX="741.0" layoutY="602.0" onAction="#btnBookSaveOnAction" prefHeight="32.0" prefWidth="82.0" ripplerFill="#e1e136" style="-fx-background-color: #e1e136;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Save">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="69.0" layoutY="692.0" onAction="#btnBookReloadOnAction" prefHeight="40.0" prefWidth="147.0" ripplerFill="#1dcc8f" style="-fx-background-color: #1dcc8f;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Reload">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtBookSearch" layoutX="72.0" layoutY="119.0" prefHeight="26.0" prefWidth="301.0" promptText="Search Book" />
+            <JFXButton buttonType="RAISED" layoutX="868.0" layoutY="602.0" onAction="#btnBookUpdateOnAction" prefHeight="32.0" prefWidth="82.0" ripplerFill="#632020" style="-fx-background-color: #e4a322;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Update">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="994.0" layoutY="602.0" onAction="#btnBookDeleteOnAction" prefHeight="32.0" prefWidth="82.0" ripplerFill="#ef5858" style="-fx-background-color: #ef5858;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Delete">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="517.0" layoutY="129.0" onAction="#btnBookSearchOnAction" prefHeight="32.0" prefWidth="147.0" ripplerFill="#1dcc8f" style="-fx-background-color: #1dcc8f;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Search">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="1118.0" layoutY="602.0" onAction="#btnBookClearOnAction" prefHeight="32.0" prefWidth="82.0" ripplerFill="#1dcc8f" style="-fx-background-color: #1dcc8f;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Clear">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtBookAvailability" layoutX="747.0" layoutY="525.0" prefHeight="26.0" prefWidth="426.0" promptText="Available or Not" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

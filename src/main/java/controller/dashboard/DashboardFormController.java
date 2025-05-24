@@ -27,19 +27,39 @@ public class DashboardFormController {
     public AnchorPane LoadFormContent;
 
     @FXML
-    void btnBooksOnAction(ActionEvent event) {
+    void btnBooksOnAction(ActionEvent event) throws IOException {
+        URL resource = this.getClass().getResource("/view/Book_Management_Form.fxml");
+        assert resource != null;
+        Parent load = null;
 
+        load = FXMLLoader.load(resource);
+
+        LoadFormContent.getChildren().clear();
+        LoadFormContent.getChildren().add(load);
     }
 
-    @FXML
-    void btnBorrowReturnOnAction(ActionEvent event) {
+    public void btnBorrowOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = this.getClass().getResource("/view/Borrow_Book_Form.fxml");
+        assert resource != null;
+        Parent load = null;
 
+        load = FXMLLoader.load(resource);
+
+        LoadFormContent.getChildren().clear();
+        LoadFormContent.getChildren().add(load);
     }
 
-    @FXML
-    void btnFinePaymentOnAction(ActionEvent event) {
+    public void btnReturnOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = this.getClass().getResource("/view/Return_Book_Form.fxml");
+        assert resource != null;
+        Parent load = null;
 
+        load = FXMLLoader.load(resource);
+
+        LoadFormContent.getChildren().clear();
+        LoadFormContent.getChildren().add(load);
     }
+
 
     @FXML
     void btnReportOnAction(ActionEvent event) {
@@ -58,5 +78,6 @@ public class DashboardFormController {
         LoadFormContent.getChildren().add(load);
 
     }
+
 
 }

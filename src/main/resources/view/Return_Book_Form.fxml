@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.returnbook.ReturnBookFormController">
+   <children>
+      <AnchorPane layoutY="-6.0" prefHeight="800.0" prefWidth="1290.0" style="-fx-background-color: #BBC1BB; -fx-background-radius: 35;">
+         <children>
+            <AnchorPane layoutX="423.0" prefHeight="90.0" prefWidth="398.0" style="-fx-background-color: #04362F; -fx-background-radius: 0 0 50 50;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <children>
+                  <Label layoutX="76.0" layoutY="32.0" text="Return Book Management" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXTextField fx:id="txtReturnMemName" layoutX="123.0" layoutY="310.0" prefHeight="26.0" prefWidth="300.0" promptText="Member Name" />
+            <JFXTextField fx:id="txtReturnContact" layoutX="123.0" layoutY="425.0" prefHeight="26.0" prefWidth="300.0" promptText="Contact Number" />
+            <JFXButton buttonType="RAISED" layoutX="954.0" layoutY="284.0" onAction="#btnReturnShowFine" prefHeight="32.0" prefWidth="182.0" ripplerFill="#e1e136" style="-fx-background-color: #e1e136;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Show Fine">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtReturnMemId" layoutX="123.0" layoutY="197.0" prefHeight="26.0" prefWidth="300.0" promptText="Member ID" />
+            <JFXButton buttonType="RAISED" layoutX="999.0" layoutY="341.0" onAction="#btnReturnPayNow" prefHeight="32.0" prefWidth="141.0" ripplerFill="#632020" style="-fx-background-color: #e4a322;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="PayNow">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="199.0" layoutY="549.0" onAction="#btnReturnMemSearchOnAction" prefHeight="32.0" prefWidth="147.0" ripplerFill="#1dcc8f" style="-fx-background-color: #1dcc8f;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Search">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="231.0" layoutY="614.0" onAction="#btnReturnClearOnAction" prefHeight="26.0" prefWidth="82.0" ripplerFill="#fa6621" style="-fx-background-color: #1dcc8f;" styleClass="login-title-layout" stylesheets="@../css/style.css" text="Clear">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="564.0" layoutY="213.0" prefHeight="20.0" prefWidth="106.0" text="Select Book :-" />
+            <TableView fx:id="tblReturnBook" layoutX="557.0" layoutY="413.0" prefHeight="311.0" prefWidth="591.0">
+              <columns>
+                <TableColumn fx:id="colReturnBookID" prefWidth="176.0" text="Book ID" />
+                <TableColumn fx:id="colReturnBorrowBook" minWidth="0.0" prefWidth="216.0" text="Borrow Book" />
+                  <TableColumn fx:id="colReturnBook" prefWidth="196.800048828125" text="Return Book" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="cmbReturnSelectBook" layoutX="661.0" layoutY="210.0" prefHeight="26.0" prefWidth="220.0" />
+            <JFXTextField fx:id="txtReturnShowFine" layoutX="564.0" layoutY="281.0" prefHeight="26.0" prefWidth="318.0" promptText="Fine" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
